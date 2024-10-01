@@ -25,5 +25,5 @@ class MemberService:
         return self.form_data_crud.delete(model_id=model_id, redirect_url=url_for("member_controller.list"))
 
     def list(self):
-        search_fields = ["name", "email"]
+        search_fields = ["name", "email","shift","technology"]
         return self.form_data_crud.paginated_list(view_name="member/list", search_fields=search_fields)
