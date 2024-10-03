@@ -1,6 +1,6 @@
 {% extends "layout/app-layout.html" %}
 
-{% set name = "Member List" %}
+{% set name = "Registration List" %}
 {% block title %}{{ name }}{% endblock %}
 
 {% block content %}
@@ -17,10 +17,10 @@
                             <button class="btn btn-secondary" type="submit" title="Search">
                                 Search
                             </button>
-                            <a title="Create" class="btn btn-primary" href="{{- url_for("member_controller.create") }}">
+                            <a title="Create" class="btn btn-primary" href="{{- url_for("registration_controller.create") }}">
                                 Add
                             </a>
-                            <a class="btn btn-danger" title="Reload" href="{{- url_for("member_controller.list") }}">
+                            <a class="btn btn-danger" title="Reload" href="{{- url_for("registration_controller.list") }}">
                                 Reload
                             </a>
                         </div>
@@ -52,9 +52,9 @@
 
                                     <td class="text-center" style="width: 50px;">
                                         <div class="btn-group">
-                                            <a href="{{url_for("member_controller.details", id=row.id)}}" type="button" class="btn btn-secondary">Details</a>
-                                            <a href="{{url_for("member_controller.update", id=row.id)}}" type="button" class="btn btn-primary">Edit</a>
-                                            <a href="{{url_for("member_controller.delete", id=row.id)}}" type="button" class="btn btn-danger delete-confirmation">Delete</a>
+                                            <a href="{{url_for("registration_controller.details", id=row.id)}}" type="button" class="btn btn-secondary">Details</a>
+                                            <a href="{{url_for("registration_controller.update", id=row.id)}}" type="button" class="btn btn-primary">Edit</a>
+                                            <a href="{{url_for("registration_controller.delete", id=row.id)}}" type="button" class="btn btn-danger delete-confirmation">Delete</a>
                                         </div>
                                     </td>
                                 </tr>

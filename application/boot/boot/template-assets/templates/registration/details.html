@@ -30,8 +30,8 @@
                     {% form_view field=form.address, wrapper="col-md-12" %}
                     <div class="col-12 mt-3">
                         <span class="float-end">
-                            <a href="{{ url_for("member_controller.update", id=data.id) }}" type="submit" class="btn btn-primary">Edit</a>
-                            <a href="{{ url_for("member_controller.list") }}" class="btn btn-danger ms-2">Cancel</a>
+                            <a href="{{ url_for("registration_controller.update", id=data.id) }}" type="submit" class="btn btn-primary">Edit</a>
+                            <a href="{{ url_for("registration_controller.list") }}" class="btn btn-danger ms-2">Cancel</a>
                         </span>
                     </div>
                 </div>

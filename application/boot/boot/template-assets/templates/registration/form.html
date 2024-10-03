@@ -1,6 +1,6 @@
 {% extends "layout/app-layout.html" %}
 
-{% set name = button|string + " Member" %}
+{% set name = button|string + "Registration" %}
 {% block title %}{{ name }}{% endblock %}
 
 {% block content %}
@@ -40,7 +40,7 @@
                         <div class="col-12">
                             <div class="float-end">
                                 <button type="submit" class="btn btn-primary">{{ button }}</button>
-                                <a href="{{ url_for("member_controller.list") }}" class="btn btn-danger ms-2">Cancel</a>
+                                <a href="{{ url_for("registration_controller.list") }}" class="btn btn-danger ms-2">Cancel</a>
                             </div>
                         </div>
                     </div>
