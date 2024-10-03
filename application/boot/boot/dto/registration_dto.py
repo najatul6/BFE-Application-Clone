@@ -2,9 +2,9 @@ from boot.model.registration import Registration
 from pweb_form_rest import fields, PWebRestDTO
 
 
-class RegisterDetailsDTO(PWebRestDTO):
+class RegistrationDetailsDTO(PWebRestDTO):
     class Meta:
-        model = Register
+        model = Registration
         load_instance = True
 
     name = fields.String(required=True, error_messages={"required": "Please enter name"})
@@ -20,17 +20,17 @@ class RegisterDetailsDTO(PWebRestDTO):
     address = fields.String(allow_none=True)
 
 
-class RegisterCreateDTO(RegisterDetailsDTO):
+class RegistrationCreateDTO(RegistrationDetailsDTO):
     class Meta:
-        model = Register
+        model = Registration
         load_instance = True
 
     password = fields.String(required=True, error_messages={"required": "Please enter password"})
 
 
-class RegisterUpdateDTO(RegisterDetailsDTO):
+class RegistrationUpdateDTO(RegistrationDetailsDTO):
     class Meta:
-        model = Register
+        model = Registration
         load_instance = True
 
     id = fields.Integer(required=True, error_messages={"required": "Please enter id"})
